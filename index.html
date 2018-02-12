@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Scala.js Tetris</title>
+  </head>
+  <body>
+    <style>
+
+      { margin: 0; padding: 0; }
+
+      html { 
+        background: url('wallpaper-tumblr.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      canvas {
+        padding: 0;
+        margin: auto;
+        display: block;
+        width: 800px;
+        height: 600px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
+    
+    <div>
+      <center>
+	<canvas tabindex="1" style="display: block" id="canvas" width="700" height="500"/>
+      </center>
+    </div>
+    <!-- Include JavaScript dependencies -->
+    <script type="text/javascript" src="scala-js-tetris-jsdeps.js"></script>
+    <!-- Include Scala.js compiled code -->
+    <script type="text/javascript" src="scala-js-tetris-fastopt.js"></script>
+    <script>
+    tetris.Tetris().main(document.getElementById('canvas'));
+</script>
+  </body>
+</html>
